@@ -34,6 +34,7 @@ public class GitTest {
          int b=20;
         System.out.println("idea 代码");
         System.out.println("最后添加的代码");
+        System.out.println("github最后添加的代码");
     }
 
 
