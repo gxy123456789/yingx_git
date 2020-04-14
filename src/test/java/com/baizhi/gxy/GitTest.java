@@ -18,6 +18,7 @@ public class GitTest {
     @Autowired
     AdminDao adminDao;
 
+
     @Resource
     UserMapper userMapper;
 
