@@ -1,0 +1,38 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /yingx
+    jsp:
+      init-parameters:
+        development: true
+
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yinxue
+    password: root
+    username: root
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+  redis:
+    port: 7000
+    host: 192.168.239.147
+    database:
+  data:
+    elasticsearch:
+      cluster-nodes: 192.168.239.152
+
+mybatis:
+  type-aliases-package: com.baizhi.gxy.entity
+  mapper-locations: classpath:com/baizhi/gxy/mapper/*Mapper.xml
+
+logging:
+  level:
+    com.baizhi.gxy.dao: debug

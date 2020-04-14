@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <table>
+        <tr v-for="(pro1,index) in pro.data">
+            <td>{{index}}</td>
+            <td>{{pro1.id}}</td>
+            <td>{{pro1.videoTitle}}</td>
+        </tr>
+        <h3>{{pro.message}}</h3>
+        <input type="text" v-model="pro.message">
+
+        <div style="height: 100px;width: 100px;background-color:red;" @click="fun(index)">
+
+        </div>
+
+        <div v-html="text"></div>
+    </table>
+    <p v-show="">
+        {{}}
+    </p>
+</div>
+</body>
+<script type="text/javascript" src="js/vuejs-2.5.16.js"></script>
+<script type="text/javascript" src="js/axios-0.18.0.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            name: "zs",
+            pro: {},
+            text: "<p>1234</p>"
+
+        },
+        methods: {
+            fun: function (index) {
+                console.log("xxxx");
+            },
+            fun1: function () {
+                var _this = this;
+                axios.get("/yingx/app/queryByReleaseTime")
+                    .then(function (response) {
+                        _this.pro = response.data;
+                    }).catch(function (error) {
+
+                })
+            }
+
+        },
+        created: function () {
+            this.fun1();
+        }
+    })
+</script>
+</html>
