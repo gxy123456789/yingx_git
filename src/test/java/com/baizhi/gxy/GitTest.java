@@ -29,6 +29,8 @@ public class GitTest {
     public void contextLossads() {
         int a = 10;
         System.out.println("从IDEA写到Git上");
+        System.out.println("对文件做的更改");
+
     }
 
 
