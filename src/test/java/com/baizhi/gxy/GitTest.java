@@ -32,6 +32,7 @@ public class GitTest {
         System.out.println("对文件做的更改");
         System.out.println("dev添加");
          int b=20;
+        System.out.println("idea 代码");
     }
 
 
