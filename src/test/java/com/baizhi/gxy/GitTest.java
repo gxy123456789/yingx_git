@@ -30,6 +30,7 @@ public class GitTest {
         int a = 10;
         System.out.println("从IDEA写到Git上");
         System.out.println("对文件做的更改");
+        System.out.println("dev添加");
 
     }
 
